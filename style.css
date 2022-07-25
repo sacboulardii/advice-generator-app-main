@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    --font-size: 28px;
+    --font-family: 'Manrope', sans-serif;
+    --font-weight: 800;
+
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--dark-blue);
+
+    color: var(--light-cyan);
+
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    
+    height: 100vh;
+    
+    padding-left: 6%;
+    padding-right: 6%;
+
+    position: relative;
+
+    text-align: center;
+}
+
+.container {
+    background-color: var(--dark-grayish);
+
+    border-radius: 0.875rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+    width: 100%;
+    max-width: calc(1440px * 0.40);
+}
+
+.text {
+    font-size: var(--font-size);
+
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.id {
+    color: var(--neon-green);
+    font-size: 0.875rem;
+    letter-spacing: 0.2rem;
+}
+
+.roll-button {
+    background-color: var(--neon-green);
+
+    border-width: 0;
+    border-radius: 100%;
+    
+    cursor: pointer;
+
+    display: block;
+    
+    margin-top: 2rem;
+
+    padding: 1.25rem;
+
+    position: absolute;
+    bottom: -2rem;
+}
+
+.image {
+    background-image: url(./images/pattern-divider-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    display: block;
+
+    width: 100%;
+    height: 2rem;
+}
+
+@media (min-width: 525px) {
+    .image {
+        background-image: url(./images/pattern-divider-desktop.svg)
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
